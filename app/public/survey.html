@@ -20,16 +20,23 @@
 <body>
     <div class="container">
         <div class="jumbotron text-center">
-            <h1 class="display-4">Friend Finder</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <hr class="my-4">
-            <a class="btn btn-primary" href="#" role="button">Take the survey</a>
-            <a class="btn btn-secondary" href="#" role="button">Learn more</a>
+            <h1 class="display-4">Complete the survey</h1>
         </div>
     </div>
     <div class="container">
-        <form action="/api/survey" method="POST">
-            <section class="questionItem row">
+        <form id="survey" name="survey" class="was-validated" action="/api/survey" method="POST">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="survey-name">Name (Require)</label>
+                    <input type="input" class="form-control" id="survey-name" placeholder="Name" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="survey-photo-link">Link to photo image (required)</label>
+                    <input type="input" class="form-control" id="survey-photo-link" placeholder="Link to photo" required>
+                </div>
+            </div>
+            <hr class="my-4">
+            <section id="survey-question-0" class="survey-question row" data-index="0" data-value="0">
                 <div class="col-1">
                     <h2>1.</h2>
                 </div>
@@ -38,28 +45,28 @@
                 </div>
                 <div class="col-11 offset-1">
                     <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="customControlValidation1" name="radio-stacked" required>
-                        <label class="custom-control-label" for="customControlValidation1">Toggle this custom radio</label>
+                        <input type="radio" class="custom-control-input" id="survey-option-01" data-value="1" name="survey-value-0" required>
+                        <label class="custom-control-label" for="survey-option-01">1</label>
                     </div>
                     <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-                        <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
+                        <input type="radio" class="custom-control-input" id="survey-option-02" data-value="2" name="survey-value-0" required>
+                        <label class="custom-control-label" for="survey-option-02">2</label>
                     </div>
                     <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-                        <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
+                        <input type="radio" class="custom-control-input" id="survey-option-03" data-value="3" name="survey-value-0" required>
+                        <label class="custom-control-label" for="survey-option-03">3</label>
                     </div>
                     <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-                        <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
+                        <input type="radio" class="custom-control-input" id="survey-option-04" data-value="4" name="survey-value-0" required>
+                        <label class="custom-control-label" for="survey-option-04">4</label>
                     </div>
                     <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-                        <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
+                        <input type="radio" class="custom-control-input" id="survey-option-05" data-value="5" name="survey-value-0" required>
+                        <label class="custom-control-label" for="survey-option-05">5</label>
                     </div>
                 </div>
             </section>
-            <section class="questionItem row">
+            <section id="survey-question-1" class="survey-question row" data-index="1" data-value="0">
                 <div class="col-1">
                     <h2>2.</h2>
                 </div>
@@ -68,64 +75,37 @@
                 </div>
                 <div class="col-11 offset-1">
                     <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="customControlValidation1" name="radio-stacked" required>
-                        <label class="custom-control-label" for="customControlValidation1">Toggle this custom radio</label>
+                        <input type="radio" class="custom-control-input" id="survey-option-11" data-value="1" name="survey-value-1" required>
+                        <label class="custom-control-label" for="survey-option-11">1</label>
                     </div>
                     <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-                        <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
+                        <input type="radio" class="custom-control-input" id="survey-option-12" data-value="2" name="survey-value-1" required>
+                        <label class="custom-control-label" for="survey-option-12">2</label>
                     </div>
                     <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-                        <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
+                        <input type="radio" class="custom-control-input" id="survey-option-13" data-value="3" name="survey-value-1" required>
+                        <label class="custom-control-label" for="survey-option-13">3</label>
                     </div>
                     <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-                        <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
+                        <input type="radio" class="custom-control-input" id="survey-option-14" data-value="4" name="survey-value-1" required>
+                        <label class="custom-control-label" for="survey-option-14">4</label>
                     </div>
                     <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-                        <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
+                        <input type="radio" class="custom-control-input" id="survey-option-15" data-value="5" name="survey-value-1" required>
+                        <label class="custom-control-label" for="survey-option-15">5</label>
                     </div>
                 </div>
             </section>
-            <section class="questionItem row">
-                <div class="col-1">
-                    <h2>3.</h2>
-                </div>
-                <div class="col-11">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nam tempore architecto! Iure, facilis, repudiandae libero pariatur voluptate at amet, quia enim minima minus dolorum qui obcaecati fugit atque ducimus.</p>
-                </div>
-                <div class="col-11 offset-1">
-                    <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="customControlValidation1" name="radio-stacked" required>
-                        <label class="custom-control-label" for="customControlValidation1">Toggle this custom radio</label>
-                    </div>
-                    <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-                        <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
-                    </div>
-                    <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-                        <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
-                    </div>
-                    <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-                        <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
-                    </div>
-                    <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-                        <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
-                    </div>
-                </div>
-            </section>
+            <hr class="my-4">
             <section class="row">
                 <div class="col-12">
-                    <input type="submit" name="submit" id="form-submit" value="Submit" class="btn btn-success" />
+                    <input type="submit" name="survey-submit" id="survey-submit" value="Submit" class="btn btn-success" />
                 </div>
             </section>
-        </form>
-            
+        </form>      
     </div>
+    <script type="text/javascript">
+        $(document).ready(init);
+    </script>
 </body>
 </html>
