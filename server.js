@@ -1,7 +1,6 @@
 // Dependencies
 // =============================================================
 var express = require("express");
-var path = require("path");
 require('dotenv').config();
 
 // Sets up the Express App
@@ -15,13 +14,8 @@ app.use('/assets', express.static('app/public/assets'));
 // Routes
 // =============================================================
 
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "app/public/home.html"));
-});
-
-app.get("/survey", function(req, res) {
-  res.sendFile(path.join(__dirname, "app/public/survey.html"));
-});
+require("./app/routing/htmlRoutes")(app);
+require("./app/routing/apiRoutes")(app);
 
 // Starts the server to begin listening
 // =============================================================

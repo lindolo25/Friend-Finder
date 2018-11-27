@@ -4,22 +4,44 @@ let init = function()
     $('.survey-question input').change(questionChange);
 }
 
-var surveySubmitHandler = function(event)
+let surveySubmitHandler = function(event)
 {
-    event.preventDefault();
     console.log("form submited");
+    event.preventDefault();
+    var surveyResult = {
+        name: $("#survey-name").val().trim(),
+        photo: $("#survey-photo-link").val().trim(),
+        scores: []
+    }
+
+    if(surveyResult.name && surveyResult.photo)
+    {
+        var questions = $(".survey-question");
+        for(var i = 0; i < questions.length; i++)
+        {
+            var temp = $(questions[i]).attr("data-value");
+            surveyResult.scores.push(temp); 
+        }
+        sendSurvey(surveyResult);
+    }
+    else
+    {
+        $("#survey-name").val(surveyResult.name);
+        $("#survey-photo-link").val(surveyResult.photo);
+        $("#survey").addClass("was-validated");
+    }
 }
 
-var questionChange = function () 
+let questionChange = function () 
 {
     var value = $(this).attr("data-value");
     $(this).parents(".survey-question").attr("data-value", value);
     console.log(value);
 }
 
-var sendSurvey = function(surveyResult)
+let sendSurvey = function(surveyResult)
 {
-
+    console.log(surveyResult);
 }
 
 
