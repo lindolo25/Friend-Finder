@@ -8,6 +8,16 @@
     margin-bottom: 2rem;
 }
 
+.profile-photo, .profile-name
+{
+    margin-bottom: 10px;
+}
+.profile-photo
+{
+    height: 150px;
+    width: 150px;
+}
+
 @media screen and (max-width: 767px)
 {
     .custom-control 

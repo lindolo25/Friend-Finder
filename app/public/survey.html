@@ -10,11 +10,12 @@
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
             integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
             crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.js"
-			integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
             
     <link rel="stylesheet" type="text/css" media="screen" href="assets/main.css" />
+    <script src="assets/commonds.js"></script>
     <script src="assets/main.js"></script>
 </head>
 <body>
@@ -23,7 +24,7 @@
             <h1 class="display-4">Complete the survey</h1>
         </div>
     </div>
-    <div class="container">
+    <div id="document-body" class="container">
         <form id="survey" name="survey" class="" action="/api/survey" method="POST">
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -36,66 +37,7 @@
                 </div>
             </div>
             <hr class="my-4">
-            <section id="survey-question-0" class="survey-question row" data-index="0" data-value="0">
-                <div class="col-1">
-                    <h2>1.</h2>
-                </div>
-                <div class="col-11">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nam tempore architecto! Iure, facilis, repudiandae libero pariatur voluptate at amet, quia enim minima minus dolorum qui obcaecati fugit atque ducimus.</p>
-                </div>
-                <div class="col-11 offset-1">
-                    <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="survey-option-01" data-value="1" name="survey-value-0" required>
-                        <label class="custom-control-label" for="survey-option-01">1</label>
-                    </div>
-                    <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="survey-option-02" data-value="2" name="survey-value-0" required>
-                        <label class="custom-control-label" for="survey-option-02">2</label>
-                    </div>
-                    <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="survey-option-03" data-value="3" name="survey-value-0" required>
-                        <label class="custom-control-label" for="survey-option-03">3</label>
-                    </div>
-                    <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="survey-option-04" data-value="4" name="survey-value-0" required>
-                        <label class="custom-control-label" for="survey-option-04">4</label>
-                    </div>
-                    <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="survey-option-05" data-value="5" name="survey-value-0" required>
-                        <label class="custom-control-label" for="survey-option-05">5</label>
-                    </div>
-                </div>
-            </section>
-            <section id="survey-question-1" class="survey-question row" data-index="1" data-value="0">
-                <div class="col-1">
-                    <h2>2.</h2>
-                </div>
-                <div class="col-11">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nam tempore architecto! Iure, facilis, repudiandae libero pariatur voluptate at amet, quia enim minima minus dolorum qui obcaecati fugit atque ducimus.</p>
-                </div>
-                <div class="col-11 offset-1">
-                    <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="survey-option-11" data-value="1" name="survey-value-1" required>
-                        <label class="custom-control-label" for="survey-option-11">1</label>
-                    </div>
-                    <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="survey-option-12" data-value="2" name="survey-value-1" required>
-                        <label class="custom-control-label" for="survey-option-12">2</label>
-                    </div>
-                    <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="survey-option-13" data-value="3" name="survey-value-1" required>
-                        <label class="custom-control-label" for="survey-option-13">3</label>
-                    </div>
-                    <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="survey-option-14" data-value="4" name="survey-value-1" required>
-                        <label class="custom-control-label" for="survey-option-14">4</label>
-                    </div>
-                    <div class="custom-control custom-radio form-check form-check-inline">
-                        <input type="radio" class="custom-control-input" id="survey-option-15" data-value="5" name="survey-value-1" required>
-                        <label class="custom-control-label" for="survey-option-15">5</label>
-                    </div>
-                </div>
-            </section>
+            <div id="survey-questions"></div>
             <hr class="my-4">
             <section class="row">
                 <div class="col-12">
